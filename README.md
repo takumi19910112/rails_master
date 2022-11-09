@@ -1,24 +1,42 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル（ユーザー情報）（deviseを使う）
 
-Things you may want to cover:
+| Column                                     | Type       | Options                                |
+| ------------------------------------------ | ---------- | -------------------------------------- |
+| nick_name                                  | string     | null: false                            |
+| email                                      | string     | null: false ,unique: true ,default: "" |
+| encrypted_password                         | string     | null: false ,default: ""               |
+| first_name                                 | string     | null: false                            |
+| last_name                                  | string     | null: false                            |
 
-* Ruby version
+### Association
+- has_many : questions     
+- has_many : comments                         
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## 　questions テーブル（質問投稿機能）
 
-* Database initialization
+| Column                                     | Type       | Options                                |
+| ------------------------------------------ | ---------- | -------------------------------------- |
+| user                                       | references | null: false, foreign_key: true         |  
+| title                                      | string     | null: false                            |
+| content                                    | text       | null: false                            |
+| tag                                        | integer    | null: false                            |
 
-* How to run the test suite
+###  Association
+- belongs_to : user
+- has_many : comments
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## comments テーブル（コメント機能）
 
-* ...
+| Column                                     | Type       | Options                                |
+| ------------------------------------------ | ---------- | -------------------------------------- |
+| user                                       | references | null: false, foreign_key: true         |
+| comment                                    | text       | null: false                            |
+###  Association
+- belongs_to : user
+- has_many : comments
+
