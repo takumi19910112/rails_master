@@ -5,7 +5,7 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
       t.timestamps
       t.string :title,           null: false
       t.string :content,         null: false
-      t.integer :tag,            null: false
+      t.integer :tag_id,         null: false
       t.references :user,null:false,foreign_key: true
     end
   end

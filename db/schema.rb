@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2022_11_10_121228) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "title", null: false
     t.string "content", null: false
-    t.integer "tag", null: false
+    t.integer "tag_id", null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
