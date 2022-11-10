@@ -6,5 +6,6 @@ FactoryBot.define do
     password_confirmation {password}
     first_name            {"山坂"}
     last_name             {"巧"}
+
   end
 end
