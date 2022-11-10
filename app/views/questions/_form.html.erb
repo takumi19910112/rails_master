@@ -1,11 +1,11 @@
-<%= form_with model: @prototype, local: true do |f|%>
+<%= form_with model: @question, local: true do |f|%>
   <div class="field">
     <%= f.label :title, "タイトル" %><br />
-    <%= f.text_field :title, id:"prototype_title" %>
+    <%= f.text_field :title, id:"content_title" %>
   </div>
 
   <div class="field">
-    <%= f.label :cocept, "タグ" %><br />
+    <%= f.collection_select(:) :cocept, "タグ" %><br />
     <%= f.text_area :concept, class: :form__text, id:"prototype_concept" %>
   </div>
 
