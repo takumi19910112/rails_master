@@ -1,3 +1,4 @@
+
 require 'rouge/plugins/redcarpet'
 
 class CustomRenderHTML < Redcarpet::Render::HTML
