@@ -3,6 +3,10 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
     create_table :questions do |t|
 
       t.timestamps
+      t.string :title,           null: false
+      t.string :content,         null: false
+      t.integer :tag,            null: false
+      t.references :user,null:false,foreign_key: true
     end
   end
 end
