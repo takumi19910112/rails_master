@@ -11,10 +11,25 @@
 
   <div class="field">
     <%= f.label :content, "本文" %><br />
-    <%= f.text_area :content, class: :form__text,id:"content" %>
+    <%= f.text_area  :content, class: 'form-control', id: 'note_explanation', "v-model" => "input", name: "rails_master[content]" %>
+    <div v-html='input | marked'></div>
   </div>
-
   <div class="actions">
     <%= f.submit "投稿する", class: :form__btn  %>
   </div>
 <% end %>
+
+ <!-- リアルタイムプレビュー -->
+  <%# <script type="text/javascript"> %>
+    <%# window.onload = function() { %>
+      <%# new Vue({ %>
+      <%# el: '#editor', %>
+      <%# data: { %>
+        <%# input: '<%== j @question.content %>', %>
+      <%# }, %>
+      <%# filters: { %>
+      <%# marked: marked, %>
+      <%# }, %>
+      <%# }); %>
+    <%# }; %>
+  <%# </script> %>
