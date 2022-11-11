@@ -1,5 +1,6 @@
 <%= form_with model: @question, local: true do |f|%>
   <%= render 'shared/error_messages', model: f.object %>
+  <div class="form__wrapper">
   <div class="field">
     <%= f.text_field :title, id:"content_title", placeholder:"タイトル" %>
   </div>
@@ -8,26 +9,17 @@
   </div>
 
   <div class="field">
-    <%= f.text_area :content, id:"content", placeholder:"本文" %>
+    <%= f.text_area :content, id: 'user_answer_code', placeholder:"マークダウン方式が使えます" %>
   </div>
 
   <div class="actions">
     <%= f.submit "投稿する", class: :form__btn  %>
   </div>
+
+  <div class="code-block">
+    <div>プレビュー</div>
+    <div id="code_markdown"></div>   <%# ここにMarkdownに変換された入力内容が入る %>
+  </div>
+  </div>
 <% end %>
 
-<!-- リアルタイムプレビュー -->
-<script type="text/javascript">
-window.onload = function() {
-new Vue({
-el: '#editor',
-data: {
-input: '<%== j @question.content %>',
-},
-filters: {
-marked: marked,
-},
-});
-};
-</script>
-</div>
