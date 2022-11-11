@@ -47,9 +47,9 @@ a {
   margin: 0 auto;
 }
 .nav {
-  width: 100%;
+  width: 150%;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 .logo {
   width: 150px;
