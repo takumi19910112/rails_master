@@ -1,25 +1,26 @@
 <%= form_with model: @question, local: true do |f|%>
   <%= render 'shared/error_messages', model: f.object %>
-  <div class="form__wrapper">
-  <div class="field">
-    <%= f.text_field :title, id:"content_title", placeholder:"タイトル" %>
-  </div>
-  <div class="field">
-    <%= f.collection_select(:tag_id,Tag.all,:id, :name, {},)  %><br />
-  </div>
+    <div class="form__wrapper">
+    <div class="contents__field">
+      <div class="field">
+        <%= f.text_field :title, id:"content_title", placeholder:"タイトル" ,class: :form__title%>
+      </div>
+      <div class="field">
+        <%= f.collection_select(:tag_id,Tag.all,:id, :name, {},class: :form__tag)  %><br />
+      </div>
 
-  <div class="field">
-    <%= f.text_area :content, id: 'user_answer_code', placeholder:"マークダウン方式が使えます" %>
-  </div>
+      <div class="field">
+        <%= f.text_area :content, id: 'user_answer_code',class: :form__content, placeholder:"マークダウン方式が使えます" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "投稿する", class: :form__btn  %>
-  </div>
+      <div class="actions">
+        <%= f.submit "投稿する", class: :form__btn  %>
+      </div>
+    </div>
 
-  <div class="code-block">
-    <div>プレビュー</div>
-    <div id="code_markdown"></div>   <%# ここにMarkdownに変換された入力内容が入る %>
-  </div>
-  </div>
+      <div class="code__block">
+        <div class="preview">プレビュー</div>
+      <div id="code_markdown"></div>   <%# ここにMarkdownに変換された入力内容が入る %>
+    </div>
 <% end %>
 
