@@ -5,6 +5,8 @@ ja:
         nickname: ニックネーム
         first_name: 姓
         last_name: 名
-      tweet:
-        text: テキスト
-        image: 画像
+      question:
+        content: 記事
+        images: 画像
+        title: タイトル
+        tag_id: タグ
