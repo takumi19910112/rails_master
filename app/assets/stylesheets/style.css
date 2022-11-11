@@ -147,6 +147,7 @@ margin-top: 30px;
   height: 400px;           /* 高さ */
   font-size: 1em;          /* 文字サイズ */
   line-height: 1.2;        /* 行の高さ */
+  resize: none;
 }
 
 
