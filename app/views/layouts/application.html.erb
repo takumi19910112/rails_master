@@ -2,12 +2,16 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RailsMaster</title>
+    <title>Rails Master</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.js'></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/monokai-sublime.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   </head>
 
   <body>
@@ -20,8 +24,9 @@
           <%# ログインしているときは以下を表示するようにしましょう %>
            <% if user_signed_in? %>
              <div class="nav__right"> 
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: :nav__logout %>
-              <%#= link_to "投稿する", new_prototype_path, method: :get , class: :nav__btn %>
+              
+              <%= link_to "投稿する", new_question_path, method: :get , class: :nav__btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: :nav__btn %>
              </div> 
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
@@ -37,7 +42,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright">Copyright © Rails Master All rights reserved.</p>
     </footer>
   </body>
 </html>

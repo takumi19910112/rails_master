@@ -5,13 +5,13 @@
        <div class="greeting"> 
         <%= "こんにちは、" %>
         <%= link_to "#{current_user.nickname}さん", root_path, class: :greeting__link%>
-       
+
        </div>
     <%# // ログインしているときは上記を表示する %>
     <% end %>
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-   <%#= render partial: 'prototype', collection: @prototypes %>
+   <%= render partial: 'question', collection: @questions %>
     </div>
   </div>
 </main>

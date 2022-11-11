@@ -1,25 +1,26 @@
-<%= form_with model: @prototype, local: true do |f|%>
-  <div class="field">
-    <%= f.label :title, "プロトタイプの名称" %><br />
-    <%= f.text_field :title, id:"prototype_title" %>
-  </div>
+<%= form_with model: @question, local: true do |f|%>
+  <%= render 'shared/error_messages', model: f.object %>
+    <div class="form__wrapper">
+    <div class="contents__field">
+      <div class="field">
+        <%= f.text_field :title, id:"content_title", placeholder:"タイトル" ,class: :form__title%>
+      </div>
+      <div class="field">
+        <%= f.collection_select(:tag_id,Tag.all,:id, :name, {},class: :form__tag)  %><br />
+      </div>
 
-  <div class="field">
-    <%= f.label :catch_copy, "キャッチコピー" %><br />
-    <%= f.text_area :catch_copy, class: :form__text, id:"prototype_catch_copy" %>
-  </div>
+      <div class="field">
+        <%= f.text_area :content, id: 'user_answer_code',class: :form__content, placeholder:"マークダウン方式が使えます" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :cocept, "コンセプト" %><br />
-    <%= f.text_area :concept, class: :form__text, id:"prototype_concept" %>
-  </div>
+      <div class="actions">
+        <%= f.submit "投稿する", class: :form__btn  %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :image, "プロトタイプの画像" %><br />
-    <%= f.file_field :image, id:"prototype_image" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
-  </div>
+      <div class="code__block">
+        <div class="preview__nav">プレビュー</div>
+      <div class="markdown__space", id="code_markdown" ></div>   <%# ここにMarkdownに変換された入力内容が入る %>
+    </div>
 <% end %>
+
