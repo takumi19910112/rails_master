@@ -1,17 +1,13 @@
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
-      <p class="prototype__hedding">
-        <%= @question.title %>
-      </p>
-      <%= link_to "by " + @question.user.nickname, root_path, class: :prototype__user %>
      
       <%#= link_to "by " + @question.user.nickname, user_path(@question.user_id),method: :get, class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @question.user_id %>
         <div class="prototype__manage">
        
-          <%= link_to "編集する", question_path(@question.id), class: :prototype__btn %>
+          <%= link_to "編集する", question_path(@question.id),data: {"turbolinks" => false} , class: :prototype__btn %>
           <%= link_to "削除する", question_path(@question.id), method: :delete, class: :prototype__btn %>
         </div>
       
@@ -28,19 +24,32 @@
           </p>
         </div>
         <div class="prototype__detail">
-          <p class="detail__title">コンセプト</p>
           <p class="detail__message">
            <%= markdown(@question.content) %>
           </p>
         </div>
       </div>
-      <div class="prototype__comments">
+       <!-- リアルタイムプレビュー -->
+  <script type="text/javascript">
+    window.onload = function() {
+      new Vue({
+      el: '#editor',
+      data: {
+        input: '<%== j @question.content %>',
+      },
+      filters: {
+      marked: marked,
+      },
+      });
+    };
+  </script>
+      <%# <div class="prototype__comments"> %>
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         
         <%#<% if user_signed_in? %>
            <%# <%= form_with(model: [@question,@comment], local: true) do |f|%>
             <%# <div class="field"> %>
-               <%# <%= f.label :content, "コメント" %><br /> %>
+               <%# <%= f.label :content, "コメント"<br /> %> 
                <%# <%= f.text_field :content, id:"comment_content" %>
             <%# </div> %>
             <%# <div class="actions"> %>
@@ -55,13 +64,13 @@
             <%# <li class="comments_list"> %>
             
               <%# <%= comment.content%>
-              <%# <%= link_to comment.user.user_name,  user_path(comment.user.id),method: :get, class: :comment_user %> %>
+              <%# <%= link_to comment.user.user_name,  user_path(comment.user.id),method: :get, class: :comment_user %>
         
             <%# </li> %>
                 <%# <% end %> 
             
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
-        </ul>
+        <%# </ul> %>
      
       </div>
     </div>
