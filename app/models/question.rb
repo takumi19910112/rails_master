@@ -7,4 +7,5 @@ class Question < ApplicationRecord
   belongs_to :tag
   belongs_to :user
   has_many_attached :images
+  has_many :favorites, dependent: :destroy 
 end
