@@ -1,21 +1,6 @@
 module MarkdownHelper
-  def markdown(content) #()内はカラム名を入れる
-    options = {
-    filter_html: true,
-    hard_wrap: true,
-    space_after_headers: true,
-    with_toc_data: true
-    }
-
-    extensions = {
-    autolink: true,
-    no_intra_emphasis: true,
-    fenced_code_blocks: true,
-    tables: true
-    }
-
-    renderer = Redcarpet::Render::HTML.new(options)
-    markdown = Redcarpet::Markdown.new(renderer, extensions)
-    markdown.render(content).html_safe #()内にはカラム名
+  def qiita_markdown(markdown)
+    processor = Qiita::Markdown::Processor.new(hostname:"example.com")
+    processor.call(markdown)[:output].to_s.html_safe
   end
 end
