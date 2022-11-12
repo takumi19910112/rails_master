@@ -10,3 +10,6 @@ ja:
         images: 画像
         title: タイトル
         tag_id: タグ
+  time:
+      formats:
+        default: "%Y/%m/%d %H:%M:%S"

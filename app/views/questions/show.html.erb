@@ -1,8 +1,8 @@
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
-     
-      <%= link_to "by " + @question.user.nickname, user_path(@question.user_id),method: :get, class: :prototype__user %>
+     <%= l @question.created_at %>
+      <%= link_to  @question.user.nickname + "さんの投稿", user_path(@question.user_id),method: :get, class: :detail__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @question.user_id %>
         <div class="prototype__manage">
@@ -28,7 +28,7 @@
    
      
         <div class="prototype__detail"> 
-          <p class="detail__message">
+          <p class="detail__title">
             <%= @question.title %>
           </p>
         </div>

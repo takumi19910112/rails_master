@@ -38,7 +38,7 @@ a {
 
 .header {
   background-color: #f1f8fe;
-  margin-bottom: 48px;
+  margin-bottom: 30px;
   padding: 20px 0;
 
 }
@@ -358,6 +358,16 @@ margin-top: 55px;
   text-align: center;
   color: #fff;
   font-size: 10px;
+}
+
+.detail__title{
+  font-size: 60px;
+  margin-right: 450px;
+}
+.detail__user
+{
+  display: block;
+ font-size: 20px;
 }
 
 /* タブレット対応 */
