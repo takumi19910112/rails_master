@@ -16,6 +16,7 @@ class QuestionsController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
   end
 
   def show
@@ -47,7 +48,7 @@ class QuestionsController < ApplicationController
      redirect_to root_path
  end
 
-end
+
 
   private
 

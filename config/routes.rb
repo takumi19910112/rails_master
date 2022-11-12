@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "questions#index"
   resources :users
   resources :questions do
-    resources :favorites, only: %i[create destroy], shallow: true
+    resources :favorites, only: [:create ,:destroy]
 end
   
 end

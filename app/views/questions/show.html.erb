@@ -17,7 +17,7 @@
    
         <%#= image_tag (@prototype.image) %>
    
-   
+      <%= render partial: 'favorites/favorite',  locals: { favorite: @favorite } %> 
 
         <div class="prototype__detail"> 
           <p class="detail__title">

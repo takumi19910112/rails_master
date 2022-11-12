@@ -1,3 +1,11 @@
-<%= link_to question_favorites_path(question), id: "favorite-button-#{question.id}", method: :post, remote: true do %>
-  <%= icon 'far', 'star' %>
+<% if @question.favorited_by?(current_user) %>
+   <%= link_to question_favorite_path(@question), method: :DELETE do %>
+   <i class="fa fa-heart"  style="color: red;"></i>
+   <%= @question.favorites.count %>like
+   <% end %>
+<% else %>
+  <%= link_to question_favorites_path(@question) , method: :POST do %>
+  <i class="fa fa-heart-o" ></i>
+  <%= @question.favorites.count %>like
+  <% end %>
 <% end %>
