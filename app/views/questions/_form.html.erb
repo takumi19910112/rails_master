@@ -1,6 +1,6 @@
 <%= form_with model: @question, local: true do |f|%>
   <%= render 'shared/error_messages', model: f.object %>
-    <div class="form__wrapper">
+    <div class="form__wrappe">
     <div class="contents__field">
       <div class="field">
         <%= f.text_field :title, id:"content_title", placeholder:"タイトル" ,class: :form__title%>

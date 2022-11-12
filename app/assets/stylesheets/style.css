@@ -88,7 +88,12 @@ a {
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
-  
+}
+.form__wrappe{
+  min-height: calc(100vh - 161px);
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
 }
 .contents__field{
 
