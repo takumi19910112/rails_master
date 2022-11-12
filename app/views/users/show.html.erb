@@ -4,7 +4,7 @@
       <div class="page-heading">
         <%= @user.nickname + "さんの投稿記事一覧"%>
       </div>
-      <div class="user__card">
+      <div class="card__wrapper">
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
         <%= render partial:"questions/question",collection: @questions%>
       </div>
