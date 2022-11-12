@@ -245,6 +245,7 @@ margin-top: 55px;
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
+  
 }
 .prototype__hedding{
   font-size: 24px;
@@ -257,16 +258,25 @@ margin-top: 55px;
   color: #999;
   text-align: center;
   text-decoration: underline;
+
 }
-.prototype__image{
+/* .prototype__image{
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
-}
+} */
 
-.detail__title{
+.detail{
   font-size: 20px;
   font-weight: bold;
+}
+
+.title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.detail__message{
+  font-size: 15px;
 }
 .prototype__manage{
   display: flex;
@@ -320,15 +330,21 @@ margin-top: 55px;
   border-radius:10px;
   word-break:break-all;
   margin-left:180px;
+  width: 50vw;
+  padding-bottom:40px;
+  margin-bottom: 40px;
+  position: absolute;
+  top:20%;
 }
-
+.title__set{
+  display: flex;
+}
 .favorite__btn{
   padding-top:20px;
+font-size: large;
 }
 
-.like:hover{
-  text-decoration: none;
-}
+
 
 /* ユーザーページ */
 .user__wrapper{
