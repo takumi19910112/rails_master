@@ -1,1 +1,1 @@
-document.getElementById("question_<%= @question.id %>").innerHTML = '<%= j(render @question) %>'
+$("#btn-favorite-<%= @question.id %>").html("<%= j(render('questions/unfavorite', question: @question)) %>");

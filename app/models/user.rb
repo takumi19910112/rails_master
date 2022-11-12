@@ -12,9 +12,22 @@ class User < ApplicationRecord
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください' 
 
 has_many :questions
-has_many :favorites, dependent: :destroy   
+has_many :favorites, dependent: :destroy
+has_many :favorite_questions, through: :favorites, source: :question
 
-def favorite_find(question_id)
-  favorites.where(question_id: question_id).exists?
-end
+# お気に入り関連のインスタンスメソッド
+  # お気に入りをする
+  def favorite(question)
+    favorites_questions << question
+  end
+
+  #  お気に入りを解除する
+  def unfavorite(board)
+    favorites_questions.destroy(question)
+  end
+
+  # お気に入りしているかどうかを判定する
+  def favorites?(question)
+    favorites.where(question_id: question.id).exists?
+  end
 end

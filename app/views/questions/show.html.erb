@@ -14,18 +14,11 @@
       <% end%>
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
     
-   <div id="question_<%= @question.id %>">
-      <% if user_signed_in? && current_user != @question.user %>    
-  <% if current_user.favorite_find(@question.id) %>
-    <%= link_to 'お気に入りをはずす', destroy_favorite_path(@question.id), method: :delete , remote: true%>
-  <% else %>
-    <%= link_to 'お気に入りに登録する', create_favorite_path(@question.id), method: :post , remote: true%>
-  <% end %>
-<% end %>
-</div>
+   
         <%#= image_tag (@prototype.image) %>
    
-     
+   
+
         <div class="prototype__detail"> 
           <p class="detail__title">
             <%= @question.title %>

@@ -1,21 +1,13 @@
 class FavoritesController < ApplicationController
-  before_action :question_find
- 
-
   def create
-    Favorite.create(user_id: current_user.id, question_id: params[:id])
+    @question = Question.find(params[:question_id])
+    current_user.favorite(@question)
   end
 
   def destroy
-    favorite = Favorite.find_by(user_id: current_user.id, question_id: params[:id])
-    favorite.destroy
+    @question = current_user.favorite_questions.find(params[:id])
+    current_user.unfavorite(@question)
   end
 
-  private
-
-  def question_find
-    # 投稿内容の取得
-    @question = Question.find(params[:id])
-  end
 
 end

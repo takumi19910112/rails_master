@@ -1,0 +1,3 @@
+<%= link_to favorite_path(question), id: "favorite-button#{question.id}", method: :delete, remote: true do %>
+  <%= icon 'fas', 'star' %>
+<% end %>
