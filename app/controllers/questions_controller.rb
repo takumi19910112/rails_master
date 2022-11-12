@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-
+  
     #@comment  = Comment.new
     #@comments = @question.comments.includes(:udser)
     #question  = Question.find(params[:id])

@@ -4,14 +4,8 @@ Rails.application.routes.draw do
   root to: "questions#index"
   resources :questions
   
-  resources :users, only: [:show, :edit, :update] do
-    get :favorites, on: :collection
-  end
-
-
-  resources :questions, expect: [:index] do
-    resource :favorites, only: [:create, :destroy]
-  end
+  post 'favorite/:id' => 'favorites#create', as: 'create_favorite'
+  delete 'favorite/:id' => 'favorites#destroy', as: 'destroy_favorite'
 
 
 end

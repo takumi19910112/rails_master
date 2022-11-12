@@ -13,4 +13,8 @@ class User < ApplicationRecord
 
 has_many :questions
 has_many :favorites, dependent: :destroy   
+
+def favorite_find(question_id)
+  favorites.where(question_id: question_id).exists?
+end
 end
