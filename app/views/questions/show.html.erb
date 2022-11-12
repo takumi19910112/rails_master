@@ -1,9 +1,10 @@
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
-     <%= l @question.created_at %>
+    <%= "#{l @question.created_at}  投稿" %>
       <%= link_to  @question.user.nickname + "さんの投稿", user_path(@question.user_id),method: :get, class: :detail__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+     
       <% if user_signed_in? && current_user.id == @question.user_id %>
         <div class="prototype__manage">
        
@@ -18,18 +19,18 @@
         <%#= image_tag (@prototype.image) %>
    
       <%= render partial: 'favorites/favorite',  locals: { favorite: @favorite } %> 
-
-        <div class="prototype__detail"> 
-          <p class="detail__title">
+      <div class="blog__content">
+       
+          <div class="detail__title">
             <%= @question.title %>
-          </p>
-        </div>
-        <div class="prototype__detail">
+          </div>
+        
+     
           <p class="detail__message">
            <%= qiita_markdown(@question.content) %>
           </p>
         </div>
-      </div>
+      
       <%# <div class="prototype__comments"> %>
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         
@@ -58,7 +59,7 @@
             
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         <%# </ul> %>
-     
+     </div>
       </div>
     </div>
   </div>
