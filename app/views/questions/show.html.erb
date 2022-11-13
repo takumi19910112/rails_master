@@ -1,25 +1,28 @@
 <main class="main">
   <div class="inner">
-    <div class="prototype__wrapper">
-    <%= "#{l @question.created_at}  投稿" %>
+   <div class="rails_master__wrapper">
+    <div class="create__box">
+     <div class="create__name">
+      <%= "#{l @question.created_at}  投稿" %>
       <%= link_to  @question.user.nickname + "さんの投稿", user_path(@question.user_id),method: :get, class: :detail__user %>
+     </div>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
-     
-      <% if user_signed_in? && current_user.id == @question.user_id %>
-        <div class="prototype__manage">
-       
-          <%= link_to "編集する",  edit_question_path(@question.id),data: {"turbolinks" => false} , class: :prototype__btn %>
-          <%= link_to "削除する", question_path(@question.id), method: :delete, class: :prototype__btn %>
-        </div>
+        <%= render partial: 'favorites/favorite',  locals: { favorite: @favorite } %> 
+       <% if user_signed_in? && current_user.id == @question.user_id %>
+        <div class="create__edit_destroy">
+           <%= link_to "編集する",  edit_question_path(@question.id),data: {"turbolinks" => false} , class: :prototype__btn %>
+           <%= link_to "削除する", question_path(@question.id), method: :delete, class: :prototype__btn %>
+         </div>
       
       <% end%>
+      </div>
       
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
     
    
         <%#= image_tag (@prototype.image) %>
    
-      <%= render partial: 'favorites/favorite',  locals: { favorite: @favorite } %> 
+   
       <div class="blog__content">
        
          <div class="detail">
@@ -31,6 +34,7 @@
       
       
            <%= qiita_markdown(@question.content) %>
+           </div>
           
         
       

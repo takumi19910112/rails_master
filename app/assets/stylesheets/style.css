@@ -243,9 +243,12 @@ margin-top: 55px;
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
+.rails_master__wrapper{
   min-height: calc(100vh - 161px);
-  
+  display: flex;
+}
+.create__name{
+  width: 180px;
 }
 .prototype__hedding{
   font-size: 24px;
@@ -278,7 +281,7 @@ margin-top: 55px;
 .detail__message{
   font-size: 15px;
 }
-.prototype__manage{
+.create__edit_destroy{
   display: flex;
   padding-top: 16px;
   font-size: large;
@@ -329,18 +332,22 @@ margin-top: 55px;
   border:1px solid #3b5998;
   border-radius:10px;
   word-break:break-all;
-  margin-left:180px;
+  margin-left:80px;
   width: 50vw;
   padding-bottom:40px;
   margin-bottom: 40px;
- 
+
 }
 .title__set{
   display: flex;
 }
 .favorite__btn{
   padding-top:20px;
-font-size: large;
+  font-size: large;
+  display: inline;
+}
+.like__btn{
+  display: inline;
 }
 
 
