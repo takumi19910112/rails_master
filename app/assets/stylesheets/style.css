@@ -95,9 +95,6 @@ a {
   justify-content:space-between;
   align-items: center;
 }
-.contents__field{
-
-}
 
 .form__title {
   border: 2px solid #87CEFA;  /* 枠線 */
@@ -120,10 +117,7 @@ a {
   font-size: 1em;          /* 文字サイズ */
   line-height: 1.2;        /* 行の高さ */
 }
-.preview__nav{
- 
 
-}
 .code__block{
 margin-left: 30px;
 margin-top: 55px;
