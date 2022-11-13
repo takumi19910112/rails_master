@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
  
   def index
     @questions = Question.includes(:user).order("created_at DESC")
+  
   end
 
   def new
@@ -15,10 +16,11 @@ class QuestionsController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
   end
 
   def show
-
+  
     #@comment  = Comment.new
     #@comments = @question.comments.includes(:udser)
     #question  = Question.find(params[:id])
@@ -46,12 +48,12 @@ class QuestionsController < ApplicationController
      redirect_to root_path
  end
 
-end
+
 
   private
 
   def question_params
-    params.require(:question).permit(:tag_id,:title,:content,).merge(user_id: current_user.id)
+    params.require(:question).permit(:tag_id,:title,:content).merge(user_id: current_user.id)
   end
 
   def set_question

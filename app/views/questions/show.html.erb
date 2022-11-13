@@ -1,47 +1,48 @@
 <main class="main">
   <div class="inner">
-    <div class="prototype__wrapper">
-     
-      <%#= link_to "by " + @question.user.nickname, user_path(@question.user_id),method: :get, class: :prototype__user %>
+   <div class="rails_master__wrapper">
+    <div class="create__box">
+     <div class="create__name">
+      <%= "#{l @question.created_at}  投稿" %>
+      <%= link_to  @question.user.nickname + "さんの投稿", user_path(@question.user_id),method: :get, class: :detail__user %>
+     </div>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
-      <% if user_signed_in? && current_user.id == @question.user_id %>
-        <div class="prototype__manage">
-       
-          <%= link_to "編集する", question_path(@question.id),data: {"turbolinks" => false} , class: :prototype__btn %>
-          <%= link_to "削除する", question_path(@question.id), method: :delete, class: :prototype__btn %>
-        </div>
+      <% if user_signed_in? %>
+        <%= render partial: 'favorites/favorite',  locals: { favorite: @favorite } %> 
+      <% end %>
+       <% if user_signed_in? && current_user.id == @question.user_id %>
+        <div class="create__edit_destroy">
+           <%= link_to "編集する",  edit_question_path(@question.id),data: {"turbolinks" => false} , class: :prototype__btn %>
+           <%= link_to "削除する", question_path(@question.id), method: :delete, class: :prototype__btn %>
+         </div>
       
       <% end%>
+      </div>
+      
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-      <div class="prototype__image">
+    
+   
         <%#= image_tag (@prototype.image) %>
-      </div>
-      <div class="prototype__body">
-        <div class="prototype__detail"> 
-          <p class="detail__message">
+   
+   
+      <div class="blog__content">
+       
+         <div class="detail">
+         <div class="tag__name">
+         <%= @question.tag.name %>
+         </div>
+         <div class="title__set">
+          
             <%= @question.title %>
-          </p>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__message">
+          </div>
+          </div>
+      
+           
            <%= qiita_markdown(@question.content) %>
-          </p>
-        </div>
-      </div>
-       <!-- リアルタイムプレビュー -->
-  <script type="text/javascript">
-    window.onload = function() {
-      new Vue({
-      el: '#editor',
-      data: {
-        input: '<%== j @question.content %>',
-      },
-      filters: {
-      marked: marked,
-      },
-      });
-    };
-  </script>
+           </div>
+          
+        
+      
       <%# <div class="prototype__comments"> %>
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         
@@ -70,7 +71,7 @@
             
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         <%# </ul> %>
-     
+     </div>
       </div>
     </div>
   </div>
