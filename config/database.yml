@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
+  adapter: mysql2
   database: rails_master_production
-  username: rails_master
-  password: <%= ENV['RAILS_MASTER_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
