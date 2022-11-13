@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :questions do
     resources :favorites, only: [:create ,:destroy]
 end
+
   
 end

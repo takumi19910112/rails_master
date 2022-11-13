@@ -28,13 +28,16 @@
       <div class="blog__content">
        
          <div class="detail">
+         <div class="tag__name">
+         <%= @question.tag.name %>
+         </div>
          <div class="title__set">
           
             <%= @question.title %>
           </div>
           </div>
       
-      
+           
            <%= qiita_markdown(@question.content) %>
            </div>
           

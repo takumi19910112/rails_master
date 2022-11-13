@@ -349,7 +349,13 @@ margin-top: 55px;
 .like__btn{
   display: inline;
 }
-
+.tag__name{
+  background-color: palevioletred;
+  display: inline-block;
+  padding: 0 10px;
+  border:1px solid palevioletred;
+  border-radius:10px;
+}
 
 
 /* ユーザーページ */
