@@ -24,7 +24,7 @@
    
         <%#= image_tag (@prototype.image) %>
    
-   
+   <div class="content_box">
       <div class="blog__content">
        
          <div class="detail">
@@ -42,11 +42,9 @@
            <%= markdown(@question.content) %>
            </div>
           
-        
-      
-      <div class="prototype__comments"> 
+      <div class="question__comments"> 
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
-        
+       <div class="comments__lists">
         <% if user_signed_in? %>
             <%= form_with(model: [@question,@comment], local: true) do |f| %>
              <div class="field"> 
@@ -72,6 +70,8 @@
             
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
          </ul> 
+         </div>
+     </div>
      </div>
       </div>
     </div>

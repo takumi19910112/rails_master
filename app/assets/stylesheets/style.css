@@ -268,9 +268,10 @@ margin-top: 55px;
   font-weight: bold;
 }
 
-.title{
-  font-size: 20px;
+.title__set{
+  font-size: 30px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 .detail__message{
   font-size: 15px;
@@ -293,15 +294,25 @@ margin-top: 55px;
   transition: 0.4s ease;
   margin: 0 4px;
 }
+.comments__lists{
+  margin-left: 10px;
+}
 .prototype__btn:hover{
   color: #fff;
   background: #999;
 }
 
-.prototype__comments{
+.question__comments{
   background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
+  border: 1px solid #f6f6f6;
+  border-radius:10px;
+  word-break:break-all;
+  margin-left:80px;
+  width: 50vw;
+  padding-bottom:40px;
+  margin-bottom: 40px;
+  display:block;
+
 }
 
 .comments_lists{
@@ -349,6 +360,10 @@ margin-top: 55px;
   padding: 0 10px;
   border:1px solid palevioletred;
   border-radius:10px;
+}
+
+.content_box{
+  display: block;
 }
 
 
