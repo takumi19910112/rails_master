@@ -146,7 +146,7 @@ margin-top: 55px;
   font-size: 1em;          /* 文字サイズ */
   line-height: 1.2;        /* 行の高さ */
   resize: none;
-  box-sizing:border-box
+  box-sizing:border-box;
 }
 
 
@@ -315,7 +315,7 @@ margin-top: 55px;
 
 }
 
-.comments_lists{
+.comment__area{
   padding-left: 20px;
  
 }
@@ -368,6 +368,27 @@ margin-top: 55px;
   border-radius:10px;
 }
 
+.message__field{
+  background:#fcfcff;
+  width: 47vw;
+  height: 20vh;
+  border-radius:10px;
+  resize: none;
+  box-sizing:border-box
+
+}
+.comment__index{
+  font-weight: bold;
+  font-size: large;
+}
+
+.actions{
+  margin-left: 590px;
+}
+.comment__font{
+  font-weight: bold;
+  font-size: large;
+}
 .content_box{
   display: block;
 }
@@ -471,18 +492,3 @@ margin-top: 55px;
   }
 }
 
-h4 {
-  display: inline-block;
-  position: relative;
-  z-index: 8;
-  margin: 0;
-  padding: 8px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 400;
-  background-color: #5a6165;
-}
-h4 + div > pre {
-  margin-top: -30px;
-  padding-top: 56px;
-}

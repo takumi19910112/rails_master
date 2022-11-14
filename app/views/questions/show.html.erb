@@ -44,25 +44,27 @@
           
       <div class="question__comments"> 
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
-       <div class="comments__lists">
+       <div class="comment__area">
         <% if user_signed_in? %>
             <%= form_with(model: [@question,@comment], local: true) do |f| %>
-             <div class="field"> 
-                <%= f.label :message, "コメント" %><br /> 
-                <%= f.text_area :message, id:"comment_content" %>
-             </div> 
+             <div class ="comment__font">
+                <%= f.label :message, "コメントする" %><br /> 
+            </div>
+                <%= f.text_area :message, id:"comment_content" , class: :message__field,placeholder:"マークダウン方式でテキストを入力できます" %>
+             
              <div class="actions"> 
                 <%= f.submit "送信する", class: :form__btn  %>
              </div> 
             <% end %> 
          <%end%>
         <%# // ログインしているユーザーには上記を表示する %>
+        <div class="comment__index">コメント一覧</div>
            <ul class="comments_lists"> 
+  
           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
              <% @comments.each do |comment|%>
              <li class="comments_list"> 
-            
-              <%= comment.message %>
+            <%= markdown(comment.message)%>
                <%= link_to comment.user.nickname,  user_path(comment.user.id),method: :get, class: :comment_user %>
         
              </li> 
