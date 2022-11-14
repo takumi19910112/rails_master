@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     @question = Question.find(params[:question_id])
     @comment = @question.comments.new(comment_params)
     if @comment.save
-    redirect_to question_path(@question)
+      CommentChannel.broadcast_to @question, { comment: @comment, user: @comment.user } 
     else
       @comments = @question.comments.includes(:user)
       render "questions/show"

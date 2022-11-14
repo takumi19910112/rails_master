@@ -46,7 +46,7 @@
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
        <div class="comment__area">
         <% if user_signed_in? %>
-            <%= form_with(model: [@question,@comment], local: true) do |f| %>
+            <%= form_with model: [@question,@comment], local: true ,id: "comment-form" do |f| %>
              <div class ="comment__font">
                 <%= f.label :message, "コメントする" %><br /> 
             </div>
@@ -58,17 +58,17 @@
             <% end %> 
          <%end%>
         <%# // ログインしているユーザーには上記を表示する %>
-        <div class="comment__index">コメント一覧</div>
-           <ul class="comments_lists"> 
-  
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+        <div id = "comments">
+        <div class="comment__index">コメント一覧</div>    
+           <ul class="comments_lists" > 
              <% @comments.each do |comment|%>
-             <li class="comments_list"> 
-            <%= markdown(comment.message)%>
-               <%= link_to "#{comment.user.nickname}さんのコメント",  user_path(comment.user.id),method: :get, class: :comment_user %>
-              <%= "#{l comment.created_at}  投稿" %>
+              <li class="comments_list"> 
+                <%= markdown(comment.message)%>
+                <%= link_to "#{comment.user.nickname}さんのコメント",  user_path(comment.user.id),method: :get, class: :comment_user %>
+                <%= "#{l comment.created_at}  投稿" %>
              </li> 
-                 <% end %> 
+             <% end %>
+        </div> 
             
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
          </ul> 
