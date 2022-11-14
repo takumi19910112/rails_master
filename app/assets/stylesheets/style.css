@@ -323,6 +323,7 @@ margin-top: 55px;
 .comments_list{
   
   padding-bottom: 30px;
+  padding-right: 20px;
 
 }
 
@@ -375,7 +376,7 @@ margin-top: 55px;
   height: 20vh;
   border-radius:10px;
   resize: none;
-  box-sizing:border-box
+  box-sizing:border-box;
 
 }
 .comment__index{
@@ -394,6 +395,9 @@ margin-top: 55px;
   display: block;
 }
 
+.detail__user{
+  text-decoration: underline;
+}
 
 /* ユーザーページ */
 .user__wrapper{
