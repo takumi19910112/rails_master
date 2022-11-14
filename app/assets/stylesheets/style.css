@@ -317,12 +317,18 @@ margin-top: 55px;
 
 .comments_lists{
   padding-left: 20px;
+ 
 }
 
 .comments_list{
-  list-style-type: square;
+  
   padding-bottom: 5px;
+
 }
+
+
+
+
 
 .comment_user{
   font-size: 16px;
@@ -465,3 +471,18 @@ margin-top: 55px;
   }
 }
 
+h4 {
+  display: inline-block;
+  position: relative;
+  z-index: 8;
+  margin: 0;
+  padding: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #5a6165;
+}
+h4 + div > pre {
+  margin-top: -30px;
+  padding-top: 56px;
+}
