@@ -38,7 +38,7 @@
           </div>
       
         
-            <%= toc(@question.content) %>
+            <%# <%= toc(@question.content) %> 
             <%= markdown(@question.content) %> 
            </div>
           
@@ -53,7 +53,7 @@
                 <%= f.text_area :message, id:"comment_content" , class: :message__field,placeholder:"マークダウン方式でテキストを入力できます" %>
              
              <div class="actions"> 
-                <%= f.submit "送信する", class: :form__btn  %>
+                <%= f.submit "コメント", class: :form__btn  %>
              </div> 
             <% end %> 
          <%end%>
@@ -65,8 +65,8 @@
              <% @comments.each do |comment|%>
              <li class="comments_list"> 
             <%= markdown(comment.message)%>
-               <%= link_to comment.user.nickname,  user_path(comment.user.id),method: :get, class: :comment_user %>
-        
+               <%= link_to "#{comment.user.nickname}さんのコメント",  user_path(comment.user.id),method: :get, class: :comment_user %>
+              <%= "#{l comment.created_at}  投稿" %>
              </li> 
                  <% end %> 
             
