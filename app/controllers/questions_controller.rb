@@ -21,9 +21,9 @@ class QuestionsController < ApplicationController
 
   def show
   
-    #@comment  = Comment.new
-    #@comments = @question.comments.includes(:udser)
-    #question  = Question.find(params[:id])
+    @comment  = Comment.new
+    @comments = @question.comments.includes(:udser)
+    question  = Question.find(params[:id])
   end
   
   def edit
