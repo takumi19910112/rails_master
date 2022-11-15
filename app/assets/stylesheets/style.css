@@ -35,7 +35,11 @@ a {
 }
 
 /* ヘッダー */
+.sign_up__btn,.sign_in__btn{
 
+
+  
+}
 .header {
   background-color: #f1f8fe;
   margin-bottom: 30px;
