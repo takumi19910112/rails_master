@@ -27,8 +27,14 @@
           <%# ログインしているときは以下を表示するようにしましょう %>
            <% if user_signed_in? %>
              <div class="nav__right"> 
-              <%= link_to "投稿する", new_question_path, method: :get , class: :nav__btn %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: :nav__btn %>
+              <%= link_to  new_question_path, method: :get , class: :nav__btn do %>
+              <i class="fa-solid fa-blog"></i>
+              <%= "投稿する" %>
+              <% end %>
+              <%= link_to destroy_user_session_path, method: :delete,class: :nav__btn do %>
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <%= "ログアウト" %>
+              <% end %>
              </div> 
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
