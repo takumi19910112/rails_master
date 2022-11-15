@@ -378,6 +378,11 @@ font-size: small;
   font-size: large;
   display: inline;
 }
+.bookmark__btn{
+  padding-top:20px;
+  font-size: large;
+  display: inline;
+}
 .like__btn{
   display: inline;
 }

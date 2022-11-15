@@ -1,0 +1,13 @@
+<div class="bookmark__btn">
+<% if @question.bookmarked_by?(current_user) %>
+   <%= link_to question_bookmark_path(@question), method: :DELETE do %>
+   <i class="fa-solid fa-book-bookmark" style="color: green"></i>
+   <div class="like__btn"><%= @question.bookmarks.count %></div>
+   <% end %>
+<% else %>
+  <%= link_to question_bookmarks_path(@question) , method: :POST do %>
+   <i class="fa-solid fa-book-bookmark" ></i>
+  <div class="like__btn"><%= @question.bookmarks.count %></div>
+  <% end %>
+<% end %>
+</div>
