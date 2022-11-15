@@ -1,0 +1,8 @@
+<%= form_with model: [question, comment] , remote: true do |form| %>
+  <div>
+    <%= form.text_area :message %>
+  </div>
+  <div class="actions">
+    <%= form.submit "コメントをする" %>
+  </div>
+<% end %>

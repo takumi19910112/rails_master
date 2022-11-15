@@ -44,36 +44,17 @@
           
       <div class="question__comments"> 
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
-       <div class="comment__area">
-        <% if user_signed_in? %>
-            <%= form_with model: [@question,@comment], id: "form",local: true do |f| %>
-             <div class ="comment__font">
-                <%= f.label :message, "コメントする" %><br /> 
-            </div>
-                <%= f.text_area :message, id: "comment_content" , class: :message__field,placeholder:"マークダウン方式でテキストを入力できます" %>
-             
-             <div class="actions"> 
-                <%= f.submit "コメント", class: :form__btn  ,id: "submit"%>
-             </div> 
-            <% end %> 
-         <%end%>
-        <%# // ログインしているユーザーには上記を表示する %>
-        <div id="list"></div>
-        <div class="comment__index">コメント一覧</div>
-           <ul class="comments_lists"> 
-  
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-             <% @comments.each do |comment|%>
-             <li class="comments_list"> 
-            <%= markdown(comment.message)%>
-               <%= link_to "#{comment.user.nickname}さんのコメント",  user_path(comment.user.id),method: :get, class: :comment_user %>
-              <%= "#{l comment.created_at}  投稿" %>
-             </li> 
-                 <% end %> 
-            
-          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
-         </ul> 
-         </div>
+      <div>
+    <h4>コメント</h4>
+    <div id="comments_area"><!-- #① -->
+      <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+      <%= render partial: 'comments/index', locals: { comments: @comments } %>
+    </div>  
+    <% if user_signed_in? %>
+      <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+      <%= render partial: 'comments/form', locals: { comment: @comment, question: @question } %>
+    <% end %>
+  </div>
      </div>
      </div>
       </div>
