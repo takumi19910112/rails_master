@@ -5,11 +5,13 @@
        <div class="greeting"> 
         <%= "こんにちは、" %>
         <%= link_to "#{current_user.nickname}さん", user_path(current_user), class: :greeting__link%>
-
        </div>
-    <%# // ログインしているときは上記を表示する %>
     <% end %>
-    <div class="card__wrapper">
+     <div class="search-form">
+  <%= form_with url: search_questions_path, method: :get, local: true do |f| %>
+    <%= f.text_field :keyword %>
+    <%= f.submit "検索" %>
+  <% end %>
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
    <%= render partial: 'question', collection: @questions %>
     </div>

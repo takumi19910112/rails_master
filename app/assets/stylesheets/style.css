@@ -133,6 +133,7 @@ margin-top: 55px;
   line-height: 1.2;        
   box-sizing:border-box;
   overflow-y: scroll; 
+  margin-bottom: 30px;
 }
 
 
@@ -154,7 +155,7 @@ margin-top: 55px;
   margin: 10px 0;
 }
 
-.actions{
+.action{
   margin-bottom: 40px;
 }
 

@@ -19,5 +19,12 @@ class Question < ApplicationRecord
     bookmarks.where(user_id: user).exists?
   end
 
+ def self.search(search)
+    if search != ""
+      Question.where('title LIKE(?) OR content LIKE(?) ', "%#{search}%", "%#{search}%")
+    else
+      Question.all
+    end
+  end
 
 end
