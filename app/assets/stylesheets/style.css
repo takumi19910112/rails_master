@@ -88,6 +88,21 @@ a {
 .layouts-search-btn{
 height: 40px;
 transform: translate(0px,-40px);
+display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  background-color: transparent;
+}
+
+.layouts-search-btn:hover{
+  color: #fff;
+  background: #87CEFA;
 }
 
 .layouts-search-input
@@ -432,7 +447,7 @@ font-size: small;
 
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color:#3b4043;
+  color: #999;
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
