@@ -13,8 +13,14 @@
       <% end %>
        <% if user_signed_in? && current_user.id == @question.user_id %>
         <div class="create__edit_destroy">
-           <%= link_to "編集する",  edit_question_path(@question.id),data: {"turbolinks" => false} , class: :prototype__btn %>
-           <%= link_to "削除する", question_path(@question.id), method: :delete, class: :prototype__btn %>
+           <%= link_to  edit_question_path(@question.id),method: :get,data: {"turbolinks" => false} , class: :edit__btn  do%>
+           <i class="fa-solid fa-pen-to-square"></i>
+           <div class="like__btn"><%= "edit" %></div>
+           <% end %>
+           <%= link_to  question_path(@question.id), method: :delete, class: :delete__btn do %>
+           <i class="fa-regular fa-trash-can"></i>
+           <div class="like__btn"><%= "delete" %></div>
+           <% end %>
          </div>
       
       <% end%>

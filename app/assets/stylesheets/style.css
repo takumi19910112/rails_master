@@ -406,17 +406,27 @@ font-size: small;
   display: flex;
 }
 .favorite__btn{
-  padding-top:20px;
-  font-size: large;
+  font-size: 30px;
   display: inline;
+  margin-right: 30px;
 }
 .bookmark__btn{
-  padding-top:20px;
-  font-size: large;
+
+  font-size: 30px;
   display: inline;
+}
+.edit__btn{
+  display: inline;
+  font-size: 30px;
+  margin-right: 20px;
+}
+.delete__btn{
+  display: inline;
+  font-size: 30px;
 }
 .like__btn{
   display: inline;
+  font-size: large;
 }
 .tag__name{
   background-color: palevioletred;
