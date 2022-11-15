@@ -40,6 +40,7 @@ a {
   background-color: #f1f8fe;
   margin-bottom: 30px;
   padding: 20px 0;
+  height: 80px;
 
 }
 .inner {
@@ -53,6 +54,7 @@ a {
 }
 .logo {
   width: 150px;
+  transform: translate(0px, -10px);
 }
 .nav__btn{
   display: inline-block;
@@ -64,6 +66,7 @@ a {
   border: 1px #87CEFA solid;
   border-radius: 3px;
   transition: 0.4s ease;
+  transform: translate(0px, 10px);
 }
 .nav__btn:hover{
   color: #fff;
@@ -85,6 +88,37 @@ a {
   opacity: 0.5;
 }
 
+.layouts-search-btn{
+height: 40px;
+transform: translate(0px,-55px);
+display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  background-color: transparent;
+}
+
+.layouts-search-btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+
+.layouts-search-input
+{
+  margin-left: 30px;
+  width: 300px;
+  height: 40px;
+  transform: translate(0px,-55px);
+
+}
+.serach-layouts{
+  min-height: calc(100vh - 161px);
+}
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
@@ -133,6 +167,7 @@ margin-top: 55px;
   line-height: 1.2;        
   box-sizing:border-box;
   overflow-y: scroll; 
+  margin-bottom: 30px;
 }
 
 
@@ -154,7 +189,7 @@ margin-top: 55px;
   margin: 10px 0;
 }
 
-.actions{
+.action{
   margin-bottom: 40px;
 }
 
@@ -374,17 +409,27 @@ font-size: small;
   display: flex;
 }
 .favorite__btn{
-  padding-top:20px;
-  font-size: large;
+  font-size: 30px;
   display: inline;
+  margin-right: 30px;
 }
 .bookmark__btn{
-  padding-top:20px;
-  font-size: large;
+
+  font-size: 30px;
   display: inline;
+}
+.edit__btn{
+  display: inline;
+  font-size: 30px;
+  margin-right: 20px;
+}
+.delete__btn{
+  display: inline;
+  font-size: 30px;
 }
 .like__btn{
   display: inline;
+  font-size: large;
 }
 .tag__name{
   background-color: palevioletred;
@@ -415,7 +460,7 @@ font-size: small;
 
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color:#3b4043;
+  color: #999;
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
@@ -476,6 +521,7 @@ font-size: small;
 .footer {
   background-color: #999;
   padding: 10px 0;
+
 }
 .copyright {
   text-align: center;

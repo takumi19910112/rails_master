@@ -48,7 +48,11 @@ class QuestionsController < ApplicationController
      redirect_to root_path
  end
 
+ 
 
+ def search
+  @questions = Question.search(params[:keyword]).order("created_at DESC")
+end
 
   private
 

@@ -27,8 +27,14 @@
           <%# ログインしているときは以下を表示するようにしましょう %>
            <% if user_signed_in? %>
              <div class="nav__right"> 
-              <%= link_to "投稿する", new_question_path, method: :get , class: :nav__btn %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: :nav__btn %>
+              <%= link_to  new_question_path, method: :get , class: :nav__btn do %>
+              <i class="fa-solid fa-blog"></i>
+              <%= "投稿する" %>
+              <% end %>
+              <%= link_to destroy_user_session_path, method: :delete,class: :nav__btn do %>
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <%= "ログアウト" %>
+              <% end %>
              </div> 
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
@@ -41,6 +47,13 @@
           <%# // ログインしていないときは上記を表示するようにしましょう %>
         </div>
       </div>
+        <div class="search-form">
+  <%= form_with url: search_questions_path, method: :get, local: true do |f| %>
+  
+    <%= f.text_field :keyword , placeholder: "記事を検索する", class: "layouts-search-input" %>
+    
+    <%= f.submit "検索" , class: "layouts-search-btn"%>
+  <% end %>
     </header>
     <%= yield %>
     <footer class="footer">
