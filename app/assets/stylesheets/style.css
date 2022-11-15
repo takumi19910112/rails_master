@@ -302,6 +302,18 @@ margin-top: 55px;
   background: #999;
 }
 
+.comment__index{
+  margin-left: 20px;
+}
+.comment__form{
+  margin-left: 20px;
+  border-radius: 10px;
+  width: 47vw;
+  height: 20vh;
+  border-radius:10px;
+  resize: none;
+}
+
 .question__comments{
   background-color: #f6f6f6;
   border: 1px solid #f6f6f6;
