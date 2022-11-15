@@ -1,0 +1,14 @@
+<div class="comment__index">
+<% comments.each do |comment| %>
+  <% unless comment.id.nil? %>
+    <p class="comment__person"><%= link_to "#{comment.user.nickname}さん", user_path(comment.user.id) %></p>
+    <div class ="comment__comment"><%= markdown(comment.message) %></div>
+     <div class="comment__create">
+     <%= "#{l comment.created_at}  投稿" %>
+     </div>
+    <% if comment.user == current_user %>
+      <p><%= link_to 'コメントを削除する', question_comment_path(comment.question_id, comment.id), method: :delete, remote: true %></p>
+    <% end %>
+  <% end %>
+<% end %>
+</div>

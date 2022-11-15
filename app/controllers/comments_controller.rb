@@ -1,18 +1,22 @@
 class CommentsController < ApplicationController
   def create
     @question = Question.find(params[:question_id])
-    @comment = @question.comments.new(comment_params)
+    @comment = @question.comments.build(comment_params) #②
+    @comment.user_id = current_user.id #③
     if @comment.save
-    redirect_to question_path(@question)
-    else
-      @comments = @question.comments.includes(:user)
-      render "questions/show"
+      render :index #④
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id]) #⑤
+    if @comment.destroy
+      render :index #⑥
     end
   end
 
   private
-  def comment_params
-    params.require(:comment).permit(:message).merge(user_id: current_user.id,question_id: params[:question_id])
-  end
+    def comment_params
+      params.require(:comment).permit(:message, :question_id, :user_id)
+    end
 end
-

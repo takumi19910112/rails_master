@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
   def show
   
     @comment  = Comment.new
-    @comments = @question.comments.includes(:user)
+    @comments = @question.comments
     question  = Question.find(params[:id])
   end
   
