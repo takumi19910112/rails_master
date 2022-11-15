@@ -51,7 +51,7 @@ class QuestionsController < ApplicationController
  
 
  def search
-  @questions = Question.search(params[:keyword])
+  @questions = Question.search(params[:keyword]).order("created_at DESC")
 end
 
   private
