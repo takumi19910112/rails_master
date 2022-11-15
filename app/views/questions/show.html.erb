@@ -4,7 +4,6 @@
     <div class="create__box">
      <div class="create__name">
       <%= "#{l @question.created_at}  投稿" %>
-      <%= "#{l @question.updated_at}  編集"%>
       <%= link_to  @question.user.nickname + "さんの投稿", user_path(@question.user_id),method: :get, class: :detail__user %>
      </div>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
