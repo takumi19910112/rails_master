@@ -102,13 +102,14 @@ transform: translate(40px,-42px);
 display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #999;
+
   text-decoration: none;
   user-select: none;
   border: 1px #ff69b4 solid;
   border-radius: 3px;
   transition: 0.4s ease;
   background-color: transparent;
+    color: #3b4043;
 }
 
 .layouts-search-btn:hover{
