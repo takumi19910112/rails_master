@@ -38,7 +38,7 @@ a {
 .sign_up__btn,.sign_in__btn{
 
 
-  
+
 }
 .header {
   background-color: #f1f8fe;
@@ -57,7 +57,7 @@ a {
   justify-content:space-between;
 }
 .logo {
-  width: 150px;
+  width: 400px;
   transform: translate(0px, -10px);
 }
 .nav__btn{
