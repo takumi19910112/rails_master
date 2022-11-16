@@ -6,7 +6,9 @@
       </div>
       <div class="card__wrapper">
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+
         <%= render partial:"questions/question",collection: @questions%>
+      
       </div>
     </div>
   </div>

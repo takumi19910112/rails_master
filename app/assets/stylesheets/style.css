@@ -206,7 +206,7 @@ margin-top: 55px;
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  background-color: snow;
+  background-color: #ffb6c1;
   text-decoration: none;
   user-select: none;
   
@@ -475,7 +475,7 @@ font-size: small;
   border: 1px #ff69b4 solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  background-color:#fff;
+  background-color:#ffb6c1;
 }
 .actions:hover{
   color: #fff;
