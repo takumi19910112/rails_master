@@ -38,7 +38,7 @@ a {
 .sign_up__btn,.sign_in__btn{
 
 
-
+  
 }
 .header {
   background-color: #f1f8fe;
@@ -52,15 +52,19 @@ a {
   margin: 0 auto;
 }
 .nav {
-  width: 150%;
+  width: 100%;
   display: flex;
   justify-content:space-between;
 }
-.logo {
+.nav__left {
   width: 400px;
-  transform: translate(0px, -10px);
+  transform: translate(200px, 0px);
+}
+.nav__right{
+  transform: translate(200px, 0px);
 }
 .nav__btn{
+  
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -94,7 +98,7 @@ a {
 
 .layouts-search-btn{
 height: 40px;
-transform: translate(0px,-55px);
+transform: translate(40px,-42px);
 display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -117,7 +121,7 @@ display: inline-block;
   margin-left: 30px;
   width: 300px;
   height: 40px;
-  transform: translate(0px,-55px);
+  transform: translate(40px,-42px);
 
 }
 .serach-layouts{
