@@ -5,6 +5,7 @@
         <%= @user.nickname + "さんの投稿記事一覧"%>
       </div>
       <div class="card__wrapper">
+      <%= link_to  "#{@user.nickname}さんのブックマーク一覧",  question_bookmarks_path,method: :get class: :greeting__link%>%>
               
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
 
