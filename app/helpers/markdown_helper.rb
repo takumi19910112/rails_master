@@ -2,6 +2,7 @@ require 'rouge/plugins/redcarpet'
 
 class CustomRenderHTML < Redcarpet::Render::HTML
   include Rouge::Plugins::Redcarpet
+ 
 end
 
 module MarkdownHelper
@@ -12,12 +13,18 @@ module MarkdownHelper
       hard_wrap:     true,
     }
     extensions = {
-      no_intra_emphasis:   true,
-      tables:              true,
-      fenced_code_blocks:  true,
-      autolink:            true,
-      lax_spacing:         true,
+      no_intra_emphasis: true,
+      tables: true,
+      fenced_code_blocks: true,
+      autolink: true,
+      lax_spacing: true,
+      lax_html_blocks: true,
+      footnotes: true,
       space_after_headers: true,
+      strikethrough: true,
+      underline: true,
+      highlight: true,
+      quote: true
     }
 
     renderer = CustomRenderHTML.new(options)
