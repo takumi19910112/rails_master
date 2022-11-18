@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   end   
 
   def favorites
-    
     @user = User.find(params[:id])
     favorites= Favorite.where(user_id: @user.id).order("created_at DESC").pluck(:question_id)
     @favorite_questions = Question.find(favorites)

@@ -8,9 +8,11 @@
               
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
        <% if user_signed_in? && current_user.id ==  @user.id %>
+       <div class="page-heading">
        <%=link_to favorites_user_path(@user) ,method: :get do %>
          <i class="fa fa-heart"  style="color: red;"></i>した記事一覧
          <% end %>
+         </div>
          <% end %>
         <%= render partial:"questions/question",collection: @questions%>
 
