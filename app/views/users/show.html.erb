@@ -7,6 +7,7 @@
       <div class="card__wrapper">
               
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+       
        <p><%=link_to"お気に入り記事", favorites_user_path(@user) %></p>
         <%= render partial:"questions/question",collection: @questions%>
 
