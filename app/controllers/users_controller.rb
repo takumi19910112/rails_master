@@ -4,8 +4,7 @@ class UsersController < ApplicationController
     @questions = @user.questions.order("created_at DESC")
  
 
-    bookmarks = Bookmark.where(user_id: current_user.id).pluck(:question_id)
-    @bookmark_list = Question.find(bookmarks)
+    
 
   end   
 
