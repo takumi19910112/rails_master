@@ -7,7 +7,11 @@
       <div class="card__wrapper">
               
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
-
+       <% if user_signed_in? && current_user.id ==  @user.id %>
+       <%=link_to favorites_user_path(@user) ,method: :get do %>
+         <i class="fa fa-heart"  style="color: red;"></i>した記事一覧
+         <% end %>
+         <% end %>
         <%= render partial:"questions/question",collection: @questions%>
 
       </div>

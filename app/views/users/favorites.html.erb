@@ -1,0 +1,15 @@
+<main class="main">
+  <div class="inner">
+<div class="card">
+ <div class="card__body">
+ <p> <%= link_to "トップページへ戻る", root_path %></p>
+<% @favorite_questions.each do |question|%>
+    <%= "#{l question.created_at}  投稿" %>
+     <%= link_to question.title, question_path(question.id),method: :get,class: :card__title %>
+     <%= link_to "by "+ question.user.nickname, user_path(question.user.id),method: :get, class: :card__user %>
+
+<% end %>
+</div>
+</div>
+</div>
+</div>

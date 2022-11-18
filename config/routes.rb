@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :questions do
-    resources :favorites, only: [:create ,:destroy]
+    resources :favorites
      resources :comments
       resources :bookmarks
        collection do
@@ -15,6 +15,10 @@ Rails.application.routes.draw do
        end 
      end
    
-
+     resources :users, only: [:show,:index,:edit,:update] do
+      member do
+        get :favorites
+      end
+    end
   
 end
