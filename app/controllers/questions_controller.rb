@@ -2,8 +2,7 @@ class QuestionsController < ApplicationController
    before_action :set_question, only: [:edit, :show,:update]
  
   def index
-    @questions = Question.includes(:user).order("created_at DESC")
-  
+    @questions = Question.includes(:user).page(params[:page]).per(4).order("created_at DESC")
   end
 
   def new

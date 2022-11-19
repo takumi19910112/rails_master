@@ -33,6 +33,9 @@ a {
   text-decoration: none;
   color: #3b4043;
 }
+a:hover{
+  text-decoration: none;
+}
 
 /* ヘッダー */
 .sign_up__btn,.sign_in__btn{
@@ -40,9 +43,12 @@ a {
 
   
 }
+.main{
+  background-color: snow;
+}
 .header {
   background-color: #ffb6c1;
-  margin-bottom: 30px;
+
   padding: 20px 0;
   height: 80px;
 
@@ -50,6 +56,7 @@ a {
 .inner {
   width: 1024px;
   margin: 0 auto;
+
 }
 .nav {
   width: 100%;
@@ -253,23 +260,58 @@ margin-top: 55px;
 .card__wrapper {
   min-height: calc(100vh - 161px);
 }
-/* .card {
-  width: calc((100% - 50px) / 3);
+.card {
+  width: calc((100% - 50px));
   margin-bottom: 40px;
-} */
+  text-decoration: none;
+
+} 
+.card:hover{
+  text-decoration: none;
+}
 /* .card__img {
   margin-bottom: 16px;
 } */
 .card__title {
   display: block;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: bold;
-  background-color:#ffb6c1;
-  text-decoration: none ;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #ff69b4;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #ff69b4 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  transform: translate(0px, 10px);
+  height:130px;
 }
 .card__title:hover{
-  text-decoration: none;
+  
+}
+.card_bookmark{
+  font-size: 15px;
+  display: inline;
+}
+.card_nickname{
+  font-size:20px;
+  display: inline;
+}
+
+.card_created{
+  font-size: 15px;
+}
+
+.card_tag{
+  display: inline;
+  font-size: 15px;
+}
+.card_favorite{
+  display: inline;
+  font-size: 15px;
+}
+.card_title{
+  font-size: 30px;
+  font-family: "Kosugi Maru",Regular 400 ;
 }
 /* .card__summary {
   font-size: 16px;
