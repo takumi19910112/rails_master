@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     namespace :api, format: :json do
       namespace :v1 do
         post '/questions/preview', to: 'questions#preview'
+        post '/questions/upload', to: 'questions#upload' # 追加
       end
     end
 
