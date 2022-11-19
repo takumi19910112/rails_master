@@ -22,7 +22,6 @@
   padding: 1rem;
   margin-bottom: 1rem;
   pre {
-  
     font-size: 1em;
     margin: 0;
     padding: 0;
@@ -160,7 +159,7 @@
     .highlight-info {
       background: dimgray;
       color: white;
-      padding: 4px 8px;
+      padding: 7px 8px;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
       display: flex;
@@ -215,5 +214,6 @@
   pre { background-color: transparent;
   color: #fff;
 border: none;}
-  .highlight{ border: none;}
+  .highlight{ border: none;
+}
 }
