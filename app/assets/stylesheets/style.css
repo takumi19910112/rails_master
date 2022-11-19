@@ -283,7 +283,8 @@ margin-top: 55px;
   border-radius: 3px;
   transition: 0.4s ease;
   transform: translate(0px, 10px);
-  height:130px;
+  height:160px;
+  
 }
 .card__title:hover{
   
@@ -311,7 +312,7 @@ margin-top: 55px;
 }
 .card_title{
   font-size: 30px;
-  font-family: "Kosugi Maru",Regular 400 ;
+
 }
 /* .card__summary {
   font-size: 16px;
