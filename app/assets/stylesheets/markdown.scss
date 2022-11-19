@@ -22,6 +22,7 @@
   padding: 1rem;
   margin-bottom: 1rem;
   pre {
+  
     font-size: 1em;
     margin: 0;
     padding: 0;
@@ -174,7 +175,7 @@
     // コードブロック
     .highlight {
       overflow-x: scroll;
-      padding: 0.75em;
+ 
       .lineno {
         color: #ccc;
       }
@@ -211,4 +212,8 @@
   ul { @include richText_ul }
   p > code { @include richText_code }
   & > p { @include richText_p }
+  pre { background-color: transparent;
+  color: #fff;
+border: none;}
+  .highlight{ border: none;}
 }
