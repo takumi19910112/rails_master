@@ -1,10 +1,20 @@
 <div class="card">
 
   <%#= link_to image_tag(question.image,class: :card__img ), question_path(question.id),method: :get %>
-  <div class="card__body">
-    <%= "#{l question.created_at}  投稿" %>
-    <%= link_to question.title, question_path(question.id),method: :get,class: :card__title %>
-    <%= link_to "by "+ question.user.nickname, user_path(question.user.id),method: :get, class: :card__user %>
-
+  <div class="card__title">
+   <%= link_to  question_path(question.id),method: :get do%>
+    <div class="card_nickname"><%= question.user.nickname %></div>
+    <div class="card_created"> <%= l question.created_at %></div>
+    <div class="card_tag"><i class="fa-solid fa-tag"></i><%= question.tag.name %></div>
+     <div class="card_title"><%= question.title %></div>
+    <div class="card_favorite">
+    <i class="fa fa-heart"  style="color: red;"></i>
+     <%= question.favorites.count %>
+    </div>
+    <div class="card_bookmark">
+    <i class="fa-solid fa-book-bookmark" style="color: green"></i>
+    <%= question.bookmarks.count %>
+    </div>
   </div>
+  <%end%>
 </div>
