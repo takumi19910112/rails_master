@@ -4,16 +4,17 @@
   <div class="card__title">
    <%= link_to  question_path(question.id),method: :get do%>
     <div class="card_nickname"><%= question.user.nickname %></div>
-    <div class="card_created"> <%= l question.created_at %></div>
-    <div class="card_tag"><i class="fa-solid fa-tag"></i><%= question.tag.name %></div>
-     <div class="card_title"><%= question.title %></div>
-    <div class="card_favorite">
+       <div class="card_favorite">
     <i class="fa fa-heart"  style="color: red;"></i>
      <%= question.favorites.count %>
     </div>
     <div class="card_bookmark">
     <i class="fa-solid fa-book-bookmark" style="color: green"></i>
     <%= question.bookmarks.count %>
+    <div class="card_created"> <%= l question.created_at %></div>
+    <div class="card_tag"><i class="fa-solid fa-tag"></i><%= question.tag.name %></div>
+     <div class="card_title"><%= question.title %></div>
+ 
     </div>
   </div>
   <%end%>

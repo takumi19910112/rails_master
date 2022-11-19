@@ -283,33 +283,34 @@ margin-top: 55px;
   border-radius: 3px;
   transition: 0.4s ease;
   transform: translate(0px, 10px);
-  height:200px;
+  height:130px;
 }
 .card__title:hover{
   
 }
 .card_bookmark{
-  font-size: 20px;
+  font-size: 15px;
   display: inline;
 }
 .card_nickname{
   font-size:20px;
+  display: inline;
 }
 
 .card_created{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .card_tag{
   display: inline;
-  font-size: 20px;
+  font-size: 15px;
 }
 .card_favorite{
   display: inline;
-  font-size: 20px;
+  font-size: 15px;
 }
 .card_title{
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Kosugi Maru",Regular 400 ;
 }
 /* .card__summary {

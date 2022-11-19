@@ -83,3 +83,4 @@ gem 'rugged'
 gem 'redcarpet'
 gem "aws-sdk-s3", require: false
 gem 'rmagick'
+gem 'kaminari'

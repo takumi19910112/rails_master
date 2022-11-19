@@ -13,6 +13,7 @@
    
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
    <%= render partial: 'question', collection: @questions %>
+   <%= paginate @questions %>
     </div>
   </div>
   </div>
