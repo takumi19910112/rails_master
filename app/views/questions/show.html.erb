@@ -46,7 +46,13 @@
       
         
             <%# <%= toc(@question.content) %> 
-            <%= markdown(@question.content) %> 
+           
+ <article>
+  <div class="toc"><%= toc(@question.content).html_safe %>
+  </div>
+  <div class="markdown"><%= markdown(@question.content).html_safe %>
+  </div>
+</article>
            </div>
           
       <div class="question__comments"> 
