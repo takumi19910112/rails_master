@@ -10,7 +10,7 @@
       </div>
 
       <div class="field">
-        <%= f.text_area :content, id: 'user_answer_code',class: :form__content, placeholder:"マークダウンが使えます。コードブロックを使用する際は１行あけてください。" %>
+        <%= f.text_area :content, id: 'article_markdown_content',class: :form__content, placeholder:"マークダウンが使えます。コードブロックを使用する際は１行あけてください。" %>
       </div>
 
       <div class="action">
@@ -20,7 +20,7 @@
 
       <div class="code__block">
         <div class="preview__nav">プレビュー</div>
-      <div class="markdown__space", id="code_markdown" ></div>   <%# ここにMarkdownに変換された入力内容が入る %>
+      <div class="markdown__space markdown" id="preview" ></div>   <%# ここにMarkdownに変換された入力内容が入る %>
     </div>
 <% end %>
 

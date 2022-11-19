@@ -175,10 +175,12 @@ margin-top: 55px;
   font-size: 1em;          /* 文字サイズ */
   line-height: 1.2;        
   box-sizing:border-box;
-  overflow-y: scroll; 
+  overflow-y: auto; 
   margin-bottom: 30px;
 }
-
+.markdown__space.markdown {
+  font-size: 1em;
+}
 
 .form__content{
   border: 2px solid #ff69b4;  /* 枠線 */

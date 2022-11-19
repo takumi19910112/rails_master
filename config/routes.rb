@@ -20,5 +20,13 @@ Rails.application.routes.draw do
         get :favorites
       end
     end
-  
+
+    namespace :api, format: :json do
+      namespace :v1 do
+        post '/questions/preview', to: 'questions#preview'
+      end
+    end
+
+
+
 end
