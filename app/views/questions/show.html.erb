@@ -5,6 +5,7 @@
      <div class="create__name">
       <%= "#{l @question.created_at}  投稿" %>
       <%= link_to  @question.user.nickname + "さんの投稿", user_path(@question.user_id),method: :get, class: :detail__user %>
+          <%= image_tag('eye.png',class: :eye)%><div class="views"><%= "#{@question.impressionist_count}views" %></div>
      </div>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? %>
@@ -39,11 +40,11 @@
          <%= @question.tag.name %>
          </div>
          <div class="title__set">
-          
+   
             <%= @question.title %>
           </div>
           </div>
-      
+
         
             <%# <%= toc(@question.content) %> 
            

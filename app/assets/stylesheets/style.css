@@ -637,3 +637,16 @@ font-size: small;
   }
 }
 
+.eye{
+  width: 45px;
+  height: 45px;
+  transform: translate(-7px, 00px);
+  display: inline;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.views{
+  margin-top: 10px;
+  font-size: 20px;
+  display: inline;
+}

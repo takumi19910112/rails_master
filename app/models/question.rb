@@ -26,5 +26,5 @@ class Question < ApplicationRecord
       Question.all
     end
   end
-
+  is_impressionable 
 end

@@ -19,7 +19,9 @@ class QuestionsController < ApplicationController
   end
 
   def show
-  
+    impressionist(@question, nil, :unique => [:ip_address]) 
+   
+ 
     @comment  = Comment.new
     @comments = @question.comments
     question  = Question.find(params[:id])
