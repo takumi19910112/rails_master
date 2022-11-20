@@ -3,6 +3,8 @@ class QuestionsController < ApplicationController
  
   def index
     @questions = Question.includes(:user).page(params[:page]).per(4).order("created_at DESC")
+  
+    
   end
 
   def new

@@ -280,21 +280,22 @@ margin-top: 55px;
   text-decoration: none;
   user-select: none;
   border: 1px #ff69b4 solid;
-  border-radius: 3px;
+  border-radius: 10px;
   transition: 0.4s ease;
   transform: translate(0px, 10px);
-  height:160px;
+  height:200px;
   
 }
 .card__title:hover{
   
 }
 .card_bookmark{
-  font-size: 15px;
+  font-size: 25px;
   display: inline;
+  margin-left: 20px;
 }
 .card_nickname{
-  font-size:20px;
+  font-size:30px;
   display: inline;
 }
 
@@ -304,15 +305,31 @@ margin-top: 55px;
 
 .card_tag{
   display: inline;
-  font-size: 15px;
+  font-size: 25px;
+  margin-left: 200px;
+
 }
 .card_favorite{
   display: inline;
-  font-size: 15px;
+  font-size: 25px;
+  margin-left: 20px;
 }
 .card_title{
-  font-size: 30px;
+  font-size: 40px;
+margin-top: 15px;
+}
 
+
+.card_eye{
+  display: inline;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+.card_views{
+  display: inline;
+padding-bottom: 10px;
 }
 /* .card__summary {
   font-size: 16px;
