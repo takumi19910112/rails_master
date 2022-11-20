@@ -6,12 +6,12 @@
 
 
 <div class="user__wrapper">
-<% if @favorite_questions.length == 0 %>
-<%= "「いいね」した記事はありません" %>
+<% if @bookmark_questions.length == 0 %>
+<%= "お気に入り登録している記事はありません" %>
 <% end %>
 
 
-<% @favorite_questions.each do |question|%>
+<% @bookmark_questions.each do |question|%>
    <div class="card__title">
 
     <div class="card_nickname"><%= link_to  question.user.nickname , user_path(question.user_id),method: :get %></div>
