@@ -249,9 +249,11 @@ margin-top: 55px;
 
 .greeting{
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .greeting__link{
-  text-decoration: underline;
+  text-decoration: none;
+  
 }
 .page-heading {
   font-size: 30px;
@@ -283,7 +285,7 @@ margin-top: 55px;
   border-radius: 10px;
   transition: 0.4s ease;
   transform: translate(0px, 10px);
-  height:200px;
+  height:150px;
   
 }
 .card__title:hover{
@@ -324,6 +326,9 @@ margin-top: 55px;
   font-size: 40px;
 margin-top: 15px;
 color: #3b4043;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 
