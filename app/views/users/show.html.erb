@@ -9,9 +9,16 @@
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
        <% if user_signed_in? && current_user.id ==  @user.id %>
        <div class="page-heading">
+       <div class= "iine">
        <%=link_to favorites_user_path(@user) ,method: :get do %>
          <i class="fa fa-heart"  style="color: red;"></i>した記事一覧
          <% end %>
+         </div>
+         <div class="book">
+       <%= link_to bookmarks_user_path(@user), method: :get do %>
+   <i class="fa-solid fa-book-bookmark" style="color: green"></i> した記事一覧
+   <% end %>
+   </div>
          </div>
          <% end %>
         <%= render partial:"questions/question",collection: @questions%>

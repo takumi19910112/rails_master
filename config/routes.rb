@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   resources :pages 
   devise_for :users
   root to: "questions#index"
-  resources :users, only: [:show] do 
-    get :bookmarks, on: :collection 
+  resources :users, only: [:show,:index,:edit,:update] do 
+    member do
+      get :bookmarks
+    end 
   end
 
   resources :questions do

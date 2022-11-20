@@ -47,8 +47,12 @@ class QuestionsController < ApplicationController
   
  def destroy
      question = Question.find(params[:id])
-     question.destroy
-     redirect_to root_path
+     if question.user != current_user
+      redirect_to  root_path
+    else
+      question.destroy
+      redirect_to root_path
+    end
  end
 
  
