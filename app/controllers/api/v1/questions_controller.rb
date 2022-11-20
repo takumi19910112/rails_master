@@ -3,7 +3,7 @@ module Api
     class QuestionsController < ApplicationController
       include MarkdownHelper # 先ほど作成したヘルパー
       protect_from_forgery
-
+      skip_before_action :verify_authenticity_token,only:[ :upload ]
       # POST /api/v1/articles/preview
       def preview
         content = markdown(params[:content])
@@ -11,19 +11,20 @@ module Api
       end
 
        def upload
+       
         @file = params[:file]
         compress_image # 画像を加工する
         file_name = "#{SecureRandom.hex(20)}.webp"
         upload_file = @file.tempfile
 
-        s3 = Aws::S3::Resource.new(
-          region: ENV.fetch('AWS_REGION', nil),
-          access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID', nil),
-          secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY', nil)
+        s3 = ::Aws::S3::Resource.new(
+          region: "ap-northeast-1",
+          access_key_id: Rails.application.credentials.dig(:aws, :access_key_id), 
+          secret_access_key: Rails.application.credentials.dig(:aws, :secret_access_key)
         )
 
-        obj = s3.bucket(ENV.fetch('AWS_S3_BUCKET', nil)).object(file_name)
-        obj.upload_file(upload_file, { acl: 'public-read' })
+        obj = s3.bucket("railsmaster").object(file_name)
+        obj.upload_file(upload_file)
 
         render json: { filename: obj.public_url }, status: :ok
       end
