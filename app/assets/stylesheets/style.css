@@ -201,8 +201,12 @@ margin-top: 55px;
   resize: none;
   box-sizing:border-box;
 }
-
-
+.nav__btn:hover{
+  text-decoration: none;
+}
+.form__btn:hover{
+  color: #fff;
+}
 .field{
   margin: 10px 0;
 }
