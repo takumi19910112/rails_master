@@ -5,8 +5,8 @@
     <% if user_signed_in? %>
     <div class="page-heading">
        <div class="greeting"> 
-        <%= "Hello," %>
-        <%= link_to "#{current_user.nickname}さん!", user_path(current_user), class: :greeting__link%>
+     
+        <%= link_to "Hello!#{current_user.nickname}さん!", user_path(current_user), class: :greeting__link%>
        </div>
        </div>
     <% end %>
