@@ -4,7 +4,7 @@
     <p class="comment__person"><%= link_to "#{comment.user.nickname}さん", user_path(comment.user.id) %></p>
     <div class ="comment__comment"> 
     <article>
-  <div class="markdown"><%= markdown(comment.message).html_safe %>
+  <div class="markdown"><%= sanitize(markdown(comment.message)).html_safe %>
   </div>
 </article>
 </div>
