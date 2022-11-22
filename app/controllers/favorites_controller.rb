@@ -1,6 +1,9 @@
 class FavoritesController < ApplicationController
-  def index
-  end
+def index
+end
+
+
+
 
   def create
     @question = Question.find(params[:question_id])
