@@ -27,6 +27,7 @@ li {
 img {
   max-width: 100%;
   vertical-align: bottom;
+
 }
 
 a {
@@ -295,7 +296,7 @@ color: #FFF;
 .google a:hover:after {
 right: 1.4rem;
 }
-.google-login{
+.google-login a{
   transform: translate(-70px, -130px);
   background: #eee;
   border-radius: 3px;
