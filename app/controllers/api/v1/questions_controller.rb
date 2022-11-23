@@ -13,7 +13,7 @@ module Api
        def upload
        
         @file = params[:file]
-        compress_image # 画像を加工する
+        compress_image 
         file_name = "#{SecureRandom.hex(20)}.webp"
         upload_file = @file.tempfile
 
