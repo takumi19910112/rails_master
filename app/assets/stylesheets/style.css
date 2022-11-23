@@ -250,7 +250,91 @@ margin-top: 55px;
 }
 
 /* メイン */
+.sized {
+  width: 20%;
+  height: 80%;
+}
+.google a{
+  transform: translate(-50px, -380px);
+  background: #eee;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 200px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  height: 60px;
+}
 
+.google a:after {
+content: "";
+position: absolute;
+top: 50%;
+bottom: 0;
+right: 2rem;
+font-size: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: right 0.3s;
+width: 6px;
+height: 6px;
+border-top: solid 2px currentColor;
+border-right: solid 2px currentColor;
+transform: translateY(-50%) rotate(45deg);
+}
+.google a:hover {
+background: #ffb6c1;
+color: #FFF;
+}
+.google a:hover:after {
+right: 1.4rem;
+}
+.google-login{
+  transform: translate(-70px, -130px);
+  background: #eee;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 200px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  height: 60px;
+}
+.google-login a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+  }
+  .google-login a:hover {
+  background: #ffb6c1;
+  color: #FFF;
+  }
+  .google-login a:hover:after {
+  right: 1.4rem;
+  }
 .greeting{
   margin-bottom: 20px;
   margin-top: 20px;
