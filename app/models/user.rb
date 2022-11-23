@@ -22,7 +22,9 @@ def self.from_omniauth(auth)
   sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
   user = User.where(email: auth.info.email).first_or_initialize(
     nickname: auth.info.name,
-      email: auth.info.email
+    email: auth.info.email,
+    first_name: auth.info.first_name,
+    last_name: auth.info.last_name
   )
   if user.persisted?
     sns.user = user

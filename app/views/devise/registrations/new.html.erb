@@ -28,7 +28,9 @@
           <%= f.label :email, "メールアドレス" %><br />
           <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
         </div>
-
+        <%if @sns_id.present? %>
+         <%= hidden_field_tag :sns_auth, true %>
+        <% else %>
         <div class="field">
           <%= f.label :password, "パスワード（6文字以上）" %><br />
           <%= f.password_field :password, id:"user_password", autocomplete: "new-password" ,minimum_password_length: "6" %>
@@ -38,7 +40,7 @@
           <%= f.label :password, "パスワード再入力" %><br />
           <%= f.password_field :password_confirmation, id:"user_password_confirmation", autocomplete: "new-password" %>
         </div>
-
+        <% end %>
         <div class="sin_up">
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>

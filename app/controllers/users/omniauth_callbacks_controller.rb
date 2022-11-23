@@ -29,7 +29,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # end
   def google_oauth2
     authorization
+  end
+
+  def twitter
+    authorization
    end
+  
   
    private
   
