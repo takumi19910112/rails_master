@@ -255,6 +255,10 @@ margin-top: 55px;
   width: 20%;
   height: 80%;
 }
+.sizedt{
+  width: 20%;
+  height: 60%;
+}
 .google a{
   transform: translate(-50px, -380px);
   background: #eee;
@@ -336,6 +340,129 @@ right: 1.4rem;
   .google-login a:hover:after {
   right: 1.4rem;
   }
+  .twitter a{
+    transform: translate(-50px, -300px);
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    height: 60px;
+  }
+  .twitter a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 2rem;
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
+    }
+    .twitter a:hover {
+    background: #ffb6c1;
+    color: #FFF;
+    }
+    .twitter a:hover:after {
+    right: 1.4rem;
+    }
+
+.twitter a{
+    transform: translate(-50px, -300px);
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    height: 60px;
+  }
+  .twitter a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 2rem;
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
+    }
+    .twitter a:hover {
+    background: #ffb6c1;
+    color: #FFF;
+    }
+    .twitter a:hover:after {
+    right: 1.4rem;
+    }
+    .twitter-login a{
+      transform: translate(-72px,-40px);
+      background: #eee;
+      border-radius: 3px;
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 200px;
+      padding: 10px 25px;
+      color: #313131;
+      transition: 0.3s ease-in-out;
+      font-weight: 500;
+      height: 60px;
+    }
+    .twitter-login a:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      right: 2rem;
+      font-size: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s;
+      width: 6px;
+      height: 6px;
+      border-top: solid 2px currentColor;
+      border-right: solid 2px currentColor;
+      transform: translateY(-50%) rotate(45deg);
+      }
+      .twitter-login a:hover {
+      background: #ffb6c1;
+      color: #FFF;
+      }
+      .twitter-login2 a:hover:after {
+      right: 1.4rem;
+      }
+
+
 .greeting{
   margin-bottom: 20px;
   margin-top: 20px;
