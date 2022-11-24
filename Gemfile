@@ -86,3 +86,10 @@ gem "aws-sdk-s3"
 gem 'rmagick'
 gem 'kaminari'
 gem 'impressionist'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth', '~>1.9.1'
+gem 'omniauth-facebook'                  # Facebook認証
+gem 'omniauth-twitter'                   # Twitter認証
+gem 'omniauth-github'  
