@@ -36,7 +36,7 @@ group :development, :test do
 
   gem 'factory_bot_rails'
 
-   gem 'capistrano'
+  gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
@@ -50,14 +50,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-    gem 'rails-erd'
+  gem 'rails-erd'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
 
@@ -86,3 +85,10 @@ gem "aws-sdk-s3"
 gem 'rmagick'
 gem 'kaminari'
 gem 'impressionist'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth', '~>1.9.1'
+gem 'omniauth-facebook'                  # Facebook認証
+gem 'omniauth-twitter'                   # Twitter認証
+gem 'omniauth-github'  

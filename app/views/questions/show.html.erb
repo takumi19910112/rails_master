@@ -52,9 +52,9 @@
             <%# <%= toc(@question.content) %> 
            
  <article>
-  <div class="toc"><%= toc(@question.content).html_safe %>
+  <div class="toc"><%= sanitize(toc(@question.content)).html_safe %>
   </div>
-  <div class="markdown"><%= markdown(@question.content).html_safe %>
+  <div class="markdown"><%= sanitize(markdown(@question.content)).html_safe %>
   </div>
 </article>
            </div>
