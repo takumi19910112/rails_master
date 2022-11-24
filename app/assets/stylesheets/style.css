@@ -487,9 +487,7 @@ right: 1.4rem;
 .card:hover{
   text-decoration: none;
 }
-/* .card__img {
-  margin-bottom: 16px;
-} */
+
 .card__title {
   display: block;
   padding: 0.4em 1.6em;
